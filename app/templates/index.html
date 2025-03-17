@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikiData</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" href="/static/img/logo.png" type="image/png">
+    <script>
+        const texts = ["Bienvenido a TikiData", "Analiza el rendimiento de jugadores", "Predice el futuro del fútbol"];
+        let index = 0;
+
+        function changeText() {
+            document.getElementById("changing-text").innerText = texts[index];
+            index = (index + 1) % texts.length;
+        }
+
+        setInterval(changeText, 3000);
+    </script>
+</head>
+<body>
+    <img src="/static/img/logo.png" alt="Logo" class="logo">
+    <div class="container">
+        <h1>TikiData</h1>
+        <img src="/static/banner.png" alt="TikiData Banner" class="banner">
+        <p id="changing-text">Bienvenido a TikiData</p>
+    </div>
+</body>
+</html>

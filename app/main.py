@@ -1,11 +1,17 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
+from pathlib import Path
 
 app = FastAPI()
 
-@app.get("/")
-def read_root():
-    return {"message": "Bienvenido a TikiData"}
+# Servir archivos estáticos (CSS, imágenes)
+app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)
+# Configurar Jinja2
+templates = Jinja2Templates(directory="app/templates")
+
+# Ruta para la página de inicio
+@app.get("/")
+def read_root(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
