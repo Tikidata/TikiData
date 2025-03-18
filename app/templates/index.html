@@ -23,5 +23,27 @@
         <img src="/static/banner.png" alt="TikiData Banner" class="banner">
         <p id="changing-text">Bienvenido a TikiData</p>
     </div>
+
+    <h1>Partidos de LaLiga</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Equipo Local</th>
+                <th>Goles Local</th>
+                <th>Equipo Visitante</th>
+                <th>Goles Visitante</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for partido in partidos %}
+            <tr>
+                <td>{{ partido["Equipo Local"] }}</td>
+                <td>{{ partido["Goles Local"] }}</td>
+                <td>{{ partido["Equipo Visitante"] }}</td>
+                <td>{{ partido["Goles Visitante"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>

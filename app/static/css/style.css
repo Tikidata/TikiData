@@ -1,3 +1,4 @@
+/* Estilo general del cuerpo */
 body {
     font-family: Arial, sans-serif;
     background-color: white;
@@ -7,25 +8,32 @@ body {
     padding: 0;
 }
 
+/* Contenedor principal */
 .container {
     max-width: 800px;
     margin: 50px auto;
 }
 
+/* Título principal */
 h1 {
     font-size: 2em;
+    margin-top: 30px;
 }
 
+/* Imagen general */
 img {
     max-width: 80%;
     height: auto;
     border-radius: 10px;
 }
 
+/* Estilo específico para el banner */
 .banner {
     max-width: 50%;
+    margin-bottom: 20px;
 }
 
+/* Estilo para el logo */
 .logo {
     width: 50px;
     height: 50px;
@@ -33,4 +41,45 @@ img {
     top: 10px;
     left: 10px;
 }
-ººº
+
+/* Estilo para la tabla */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de celdas de la tabla */
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+/* Encabezado de la tabla */
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Estilo para las filas de la tabla */
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilo para el texto cambiante */
+#changing-text {
+    font-size: 20px;
+    color: #007BFF;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Estilo para las imágenes dentro de la tabla */
+table img {
+    max-width: 40px;
+    height: auto;
+}

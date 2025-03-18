@@ -1,17 +1,19 @@
 from fastapi import FastAPI, Request
-from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from pathlib import Path
+from fastapi.staticfiles import StaticFiles
+from obtener_datos import obtener_partidos, obtener_partidos_api
+from obtener_datos import obtener_partidos
 
 app = FastAPI()
 
-# Servir archivos estáticos (CSS, imágenes)
-app.mount("/static", StaticFiles(directory="app/static"), name="static")
-
 # Configurar Jinja2
-templates = Jinja2Templates(directory="app/templates")
+templates = Jinja2Templates(directory="templates")
 
-# Ruta para la página de inicio
+# Servir archivos estáticos
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
 @app.get("/")
 def read_root(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+    partidos = obtener_partidos()  # Obtener los datos de los partidos
+    return templates.TemplateResponse("index.html", {"request": request, "partidos": partidos})
+
