@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TikiData</title>
-    <link rel="stylesheet" href="app/static/styles.css">
+    <!-- Aquí se hace la referencia correcta al archivo CSS en 'app/static/styles.css' -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
+    <!-- Logo en la parte superior derecha -->
     <div class="header">
-        <img src="app/static/banner.png" alt="TikiData Logo" class="logo">
+        <!-- Aquí se hace la referencia correcta al logo en 'app/static/images/logo.png' -->
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="TikiData Logo" class="logo">
     </div>
+
+    <!-- Título principal -->
     <h1>TikiData</h1>
+
+    <!-- Slogan animado -->
     <div class="slogan">
         <p id="slogan">Tu fuente de información sobre LaLiga</p>
     </div>
