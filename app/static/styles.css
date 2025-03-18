@@ -44,8 +44,8 @@ h1 {
 
 @keyframes changeSlogan {
     0% { content: "Tu fuente de información sobre LaLiga"; }
-    50% { content: "Sigue los partidos en tiempo real"; }
-    100% { content: "Análisis detallados de cada juego"; }
+    50% { content: "Ve nuestra predicción"; }
+    100% { content: "Nuestra IA hace tu trabajo"; }
 }
 
 #slogan {
