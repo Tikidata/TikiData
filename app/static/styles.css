@@ -1,22 +1,54 @@
+/* Estilos Generales */
 body {
-    background-color: black;
+    background-color: #1a1a1a;
     color: white;
     font-family: Arial, sans-serif;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
+/* Estilo para el logo en la parte superior derecha */
+.header {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+/* Título principal */
 h1 {
     color: red;
     animation: changeText 5s infinite;
+    font-size: 3em;
+    margin-top: 80px;
 }
 
+/* Animación para cambiar el color del texto */
 @keyframes changeText {
     0% { color: red; }
     50% { color: white; }
     100% { color: red; }
 }
 
-.banner {
-    width: 100%;
-    max-width: 600px;
+/* Estilo para el eslogan animado */
+.slogan {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+@keyframes changeSlogan {
+    0% { content: "Tu fuente de información sobre LaLiga"; }
+    50% { content: "Sigue los partidos en tiempo real"; }
+    100% { content: "Análisis detallados de cada juego"; }
+}
+
+#slogan {
+    animation: changeSlogan 5s infinite;
+    font-style: italic;
 }
