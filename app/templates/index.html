@@ -5,45 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TikiData</title>
     <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="icon" href="/static/img/logo.png" type="image/png">
-    <script>
-        const texts = ["Bienvenido a TikiData", "Analiza el rendimiento de jugadores", "Predice el futuro del fútbol"];
-        let index = 0;
-
-        function changeText() {
-            document.getElementById("changing-text").innerText = texts[index];
-            index = (index + 1) % texts.length;
-        }
-
-        setInterval(changeText, 3000);
-    </script>
 </head>
 <body>
-    <div class="container">
-        <img src="/static/banner.png" alt="TikiData Banner" class="banner">
-        <p id="changing-text">Bienvenido a TikiData</p>
-    </div>
-
-    <h1>Partidos de LaLiga</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Equipo Local</th>
-                <th>Goles Local</th>
-                <th>Equipo Visitante</th>
-                <th>Goles Visitante</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for partido in partidos %}
-            <tr>
-                <td>{{ partido["Equipo Local"] }}</td>
-                <td>{{ partido["Goles Local"] }}</td>
-                <td>{{ partido["Equipo Visitante"] }}</td>
-                <td>{{ partido["Goles Visitante"] }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <h1>TikiData</h1>
 </body>
 </html>
