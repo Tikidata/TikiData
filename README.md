@@ -14,5 +14,5 @@ TikiData es una plataforma de análisis estadístico y predicción del rendimien
 
 ### 1. Clonar el repositorio
 ```bash
-git clone https://github.com/AlexitoLopez5/TikiData.git
+git clone https://github.com/user/TikiData.git
 cd TikiData
